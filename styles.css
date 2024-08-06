@@ -1,0 +1,264 @@
+/* Resetting Default Settings */
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* Styling Body */
+body{
+    font-family: Arial, sans-serif;
+}
+
+/* Header, Navbar and Hero Section */
+
+
+.header{
+    background-image: url('./Assets/HeroImages/HeroImage.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: #303030;
+    padding: 0px;
+}
+
+.overlay{
+   
+    background-color: rgba(0, 0, 0, 0.5);
+    
+}
+
+
+.nav{
+    color: #000000;
+    height: 65px;
+    padding: 10px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+}
+.nav ul{
+    list-style: none;
+    display: flex;
+}
+
+.nav li{
+    margin: 0 10px;
+}
+
+.nav a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.nav a:hover{
+    text-decoration: underline;
+    color: #000000;
+}
+
+.hero{
+    
+    color: #dfdfdf;
+    text-align: center;
+    padding: 225px 0;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 24px;
+}
+
+.hero-button{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff4d4d;
+    color: #ffff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+.hero-button:hover{
+    background-color: #ff3333;
+}
+.collection{
+    background-color: #f7f5f5;
+}
+.collection h2{
+    font-size: 30px;
+    font-weight: bold;
+    color: #555555;
+    padding: 30px 0px;
+    text-align: center;
+}
+
+.products{
+    padding: 0px 55px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+/* CSS for the product card container */
+.product-card {
+    width: 300px;
+    border-radius: 5px;
+    margin: 10px;
+    text-align: center;
+}
+
+/*Product image */
+.product-image img {
+    width: 100%;
+}
+
+/*Product title */
+.product-title {
+    padding: 5px;
+}
+
+/*Product price */
+.product-price {
+    font-weight: bold;
+}
+
+/*"Add to Cart" button */
+.add-to-cart {
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+.button{
+    border: 1px solid #303030 ;
+    transition: background-color 0.3s;
+}
+
+.button:hover{
+    background-color: #303030;
+    color: #ffffff;
+}
+
+.footer{
+    background-color: #d6d6d6;
+    text-align: center;
+}
+
+.contact{
+    padding: 40px;
+}
+.contact h2{
+    font-size: 20px;
+    padding-bottom: 30px;
+}
+
+.contact-container{
+    font-size: 15px;
+}
+
+.copy-rights{
+    padding: 30px;
+    font-size: 15px;
+}
+
+.form{
+    width: 250px;
+    height: 380px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+    position: absolute;
+    top: 50px;
+    left: 1090px;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+
+.form h2{
+    width: 220px;
+    font-family: sans-serif;
+    text-align: center;
+    color: #ff7200;
+    font-size: 22px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 2px;
+    padding: 8px;
+}
+
+.form input{
+    width: 240px;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid #ff7200;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: #fff;
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+
+.form input:focus{
+    outline: none;
+}
+
+.btn{
+    width: 240px;
+    height: 40px;
+    background: #ff7200;
+    border: none;
+    margin-top: 30px;
+    font-size: 11px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.btn:hover{
+    background: #fff;
+    color: #ff7200;
+}
+
+.btn{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.form .link{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    padding-top: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.form .link a{
+    text-decoration: none;
+    color: #ff7200;
+}
+
+.liw{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+    color:#ff7200;
+}
