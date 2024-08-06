@@ -3,55 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebPage Design</title>
-    <link rel="stylesheet" href="demostyle.css">
+    <title>EleganceCloth - Fashion Redefined</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Firebase SDK -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyAxowrM0Ych8guI8P_LV0IqrL1jF2Bnypw",
+          authDomain: "likhithademo.firebaseapp.com",
+          projectId: "likhithademo",
+          storageBucket: "likhithademo.appspot.com",
+          messagingSenderId: "682708695482",
+          appId: "1:682708695482:web:ac003192f7af93fc570583",
+          measurementId: "G-CFK55KM5BQ"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+      
+        // Function to handle user login
+        window.login = function() {
+          const email = document.getElementById('login-email').value;
+          const password = document.getElementById('login-password').value;
+
+          signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+              const user = userCredential.user;
+              alert("Login successful");
+              document.querySelector('.form#login').style.display = 'none';
+              document.getElementById('logout').style.display = 'block';
+            })
+            .catch((error) => {
+              const errorCode = error.code;
+              const errorMessage = error.message;
+              alert("Error: " + errorMessage);
+            });
+        };
+
+        // Function to handle user signup
+        window.signup = function() {
+          const email = document.getElementById('signup-email').value;
+          const password = document.getElementById('signup-password').value;
+
+          createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+              const user = userCredential.user;
+              alert("Signup successful");
+              document.querySelector('.form#signup').style.display = 'none';
+              document.querySelector('.form#login').style.display = 'block';
+            })
+            .catch((error) => {
+              const errorCode = error.code;
+              const errorMessage = error.message;
+              alert("Error: " + errorMessage);
+            });
+        };
+
+        // Function to handle user logout
+        window.logout = function() {
+          signOut(auth).then(() => {
+            alert("Logout successful");
+            document.getElementById('logout').style.display = 'none';
+            document.querySelector('.form#login').style.display = 'block';
+          }).catch((error) => {
+            alert("Error: " + error.message);
+          });
+        };
+
+        // Function to switch forms
+        window.switchForm = function(formId) {
+          document.querySelectorAll('.form').forEach(form => form.style.display = 'none');
+          document.querySelector(`.form#${formId}`).style.display = 'block';
+        };
+    </script>
 </head>
-<body>
-    <div class="main">
-        <div class="navbar">
-            <div class="icon">
-                <h2 class="logo">Elegance</h2>
-            </div>
-
-            <div class="menu">
-                <ul>
-                    <li><a href="./index.html">HOME</a></li>
-                    <li><a href="./about.html">ABOUT</a></li>
-                    <li><a href="./shop.html">SERVICE</a></li>
-                    <li><a href="./contact.html">CONTACT</a></li>
+<body> 
+    <div class="header">
+        <div class="overlay">
+            <div class="nav">
+                <div class="logo">EleganceCloth</div>
+                <ul class="navlinks">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./shop.html">Shop</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
                 </ul>
+                <button id="logout" class="btn" style="display: none;" onclick="logout()">Logout</button>
             </div>
-
-            <div class="search">
-                <input class="srch" type="search" name="" placeholder="Type To text">
-                <a href="#"><button class="btn">search</button></a>
-            </div>
-        </div>
-        <div class="content">
-            <h1>Welcome to<br><span>Elegance</span> <br>Clothing</h1>
-            <p class="Par">Elegance is not standing out, but being remembered.<br>Style is a way to say who you are without having to speak.</p>
-
-            <button class="cn"><a href="#">JOIN US</a></button>
-
-            <div class="form">
-                <h2>Login</h2>
-                <input type="email" name="email" placeholder="Enter Email">
-                <input type="password" name="" placeholder="Enter Password">
-                <button class="btn"><a href="#">Login</a></button>
-
-                <p class="link">Don't have an account<br>
-                <a href="#">Sing up</a></p>
-                <p class="liw">Login with</p>
-
-                <div class="icon">
-                    <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
-                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
-                    <a href="#"><ion-icon name="logo-google"></ion-icon></a>
-                    <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
-                    <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+            <div class="hero">
+                <div class="hero-text">
+                    <h1>Welcome to EleganceCloth</h1>
+                    <p>Fashion Redefined</p>
+                    <a href="./shop.html" class="hero-button">Shop</a>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="collection">
+        <h2>Trending Collections</h2>
+        <div class="products">
+            <!-- Product cards here -->
+        </div>
+    </div>
+    <div class="footer">
+        <div class="contact">
+            <h2>Contact Us</h2>
+            <div class="contact-container">
+                <p>If you have any questions or need assistance, feel free to contact us:</p>
+                <p>Email: contact@elegancecloth.com</p>
+                <p>Phone: +91 9384181281</p>
+            </div>
+        </div>
+        <div class="copy-rights">
+            <p>&copy; 2023 EleganceCloth. All rights reserved.</p>
+        </div>
+    </div>
+    <div class="form" id="login">
+        <h2>Login</h2>
+        <input type="email" id="login-email" placeholder="Enter Email">
+        <input type="password" id="login-password" placeholder="Enter Password">
+        <button class="btn" onclick="login()">Login</button>
+        <p class="link">Don't have an account?<br><a href="javascript:void(0)" onclick="switchForm('signup')">Sign up</a></p>
+        <p class="liw">Login with</p>
+    </div>
+    <div class="form" id="signup" style="display: none;">
+        <h2>Sign Up</h2>
+        <input type="email" id="signup-email" placeholder="Enter Email">
+        <input type="password" id="signup-password" placeholder="Enter Password">
+        <button class="btn" onclick="signup()">Sign Up</button>
+        <p class="link">Already have an account?<br><a href="javascript:void(0)" onclick="switchForm('login')">Login</a></p>
     </div>
 </body>
 </html>

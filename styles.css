@@ -1,38 +1,33 @@
 /* Resetting Default Settings */
-*{
-    padding: 0px;
-    margin: 0px;
+* {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
-html{
+html {
     scroll-behavior: smooth;
 }
 
 /* Styling Body */
-body{
+body {
     font-family: Arial, sans-serif;
 }
 
 /* Header, Navbar and Hero Section */
-
-
-.header{
+.header {
     background-image: url('./Assets/HeroImages/HeroImage.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
     color: #303030;
-    padding: 0px;
+    padding: 0;
 }
 
-.overlay{
-   
+.overlay {
     background-color: rgba(0, 0, 0, 0.5);
-    
 }
 
-
-.nav{
+.nav {
     color: #000000;
     height: 65px;
     padding: 10px 50px;
@@ -42,31 +37,30 @@ body{
     z-index: 2;
 }
 
-.logo{
+.logo {
     font-size: 24px;
     font-weight: bold;
 }
-.nav ul{
+.nav ul {
     list-style: none;
     display: flex;
 }
 
-.nav li{
+.nav li {
     margin: 0 10px;
 }
 
-.nav a{
+.nav a {
     text-decoration: none;
     color: #000000;
 }
 
-.nav a:hover{
+.nav a:hover {
     text-decoration: underline;
     color: #000000;
 }
 
-.hero{
-    
+.hero {
     color: #dfdfdf;
     text-align: center;
     padding: 225px 0;
@@ -81,36 +75,36 @@ body{
     font-size: 24px;
 }
 
-.hero-button{
+.hero-button {
     display: inline-block;
     padding: 10px 20px;
     background-color: #ff4d4d;
-    color: #ffff;
+    color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
     margin-top: 20px;
     font-weight: bold;
     transition: background-color 0.3s;
 }
-.hero-button:hover{
+.hero-button:hover {
     background-color: #ff3333;
 }
-.collection{
+/* Collection Section */
+.collection {
     background-color: #f7f5f5;
 }
-.collection h2{
+.collection h2 {
     font-size: 30px;
     font-weight: bold;
     color: #555555;
-    padding: 30px 0px;
+    padding: 30px 0;
     text-align: center;
 }
 
-.products{
-    padding: 0px 55px;
+.products {
+    padding: 0 55px;
     display: flex;
     justify-content: space-around;
-    
 }
 
 /* CSS for the product card container */
@@ -121,22 +115,22 @@ body{
     text-align: center;
 }
 
-/*Product image */
+/* Product image */
 .product-image img {
     width: 100%;
 }
 
-/*Product title */
+/* Product title */
 .product-title {
     padding: 5px;
 }
 
-/*Product price */
+/* Product price */
 .product-price {
     font-weight: bold;
 }
 
-/*"Add to Cart" button */
+/* "Add to Cart" button */
 .add-to-cart {
     font-weight: bold;
     text-align: center;
@@ -145,42 +139,44 @@ body{
     padding: 10px;
     cursor: pointer;
 }
-.button{
-    border: 1px solid #303030 ;
+.button {
+    border: 1px solid #303030;
     transition: background-color 0.3s;
 }
 
-.button:hover{
+.button:hover {
     background-color: #303030;
     color: #ffffff;
 }
 
-.footer{
+/* Footer Section */
+.footer {
     background-color: #d6d6d6;
     text-align: center;
 }
 
-.contact{
+.contact {
     padding: 40px;
 }
-.contact h2{
+.contact h2 {
     font-size: 20px;
     padding-bottom: 30px;
 }
 
-.contact-container{
+.contact-container {
     font-size: 15px;
 }
 
-.copy-rights{
+.copy-rights {
     padding: 30px;
     font-size: 15px;
 }
 
-.form{
+/* Form Section */
+.form {
     width: 250px;
     height: 380px;
-    background: linear-gradient(to top, rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0.8) 50%);
     position: absolute;
     top: 50px;
     left: 1090px;
@@ -188,8 +184,7 @@ body{
     padding: 25px;
 }
 
-
-.form h2{
+.form h2 {
     width: 220px;
     font-family: sans-serif;
     text-align: center;
@@ -201,7 +196,7 @@ body{
     padding: 8px;
 }
 
-.form input{
+.form input {
     width: 240px;
     height: 35px;
     background: transparent;
@@ -216,11 +211,11 @@ body{
     font-family: sans-serif;
 }
 
-.form input:focus{
+.form input:focus {
     outline: none;
 }
 
-.btn{
+.btn {
     width: 240px;
     height: 40px;
     background: #ff7200;
@@ -232,18 +227,18 @@ body{
     color: #fff;
 }
 
-.btn:hover{
+.btn:hover {
     background: #fff;
     color: #ff7200;
 }
 
-.btn{
+.btn a {
     text-decoration: none;
     color: black;
     font-weight: bold;
 }
 
-.form .link{
+.form .link {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 17px;
     padding-top: 20px;
@@ -251,14 +246,14 @@ body{
     color: #fff;
 }
 
-.form .link a{
+.form .link a {
     text-decoration: none;
     color: #ff7200;
 }
 
-.liw{
+.liw {
     padding-top: 15px;
     padding-bottom: 10px;
     text-align: center;
-    color:#ff7200;
+    color: #ff7200;
 }
